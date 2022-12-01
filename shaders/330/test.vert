@@ -10,6 +10,7 @@ in vec4 myNormal;
 in vec4 myPosition;
 
 out vec4 myNormalOut;
+out vec2 texCoord;
 //TODO: pass out the needed variables
 
 void main() {
@@ -19,9 +20,9 @@ void main() {
 	
 	float theta = .5 + atan2(gl_Position.x, gl_Position.z);
 	float rawU = theta / (2.0f * 3.14159265358979323846264338327950288419716939937510);
-	float u = 1 - (rawU + 0.5);
+	float u = 1 - (rawU + 0.5));
 	float v = fmod(.5 + gl_Position[1], 1);
-
+	texCoord = glm::vec2(u, v);
 	
 }
 

@@ -23,5 +23,5 @@ void main()
 	// float s = fmod((u*(float)my_ppm->getWidth()*texture->repeatU), (float)my_ppm->getWidth());
 	// float t = fmod((v*(float)my_ppm->getHeight()*texture->repeatV), (float)my_ppm->getHeight());
 	// SceneColor tex_c = my_ppm->getPixel(s, my_ppm->getHeight()-t);
-	texture(sampler2D textureName, vec2 texCoord) 
+	texture(sampler2D textureName, vec2 texCoord) ;
 }
