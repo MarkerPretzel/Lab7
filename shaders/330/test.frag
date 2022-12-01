@@ -16,11 +16,12 @@ void main()
 	outputColor = dot(vec4(lightPos, 1.0), myNormalOut) * light;
 	//outputColor = vec4(rotateLightPos, 1.0);
 	// outputColor = vec4(1.0, 1.0, 1.0, 1.0);
-	float theta = .5 + atan2(ist_min.x, ist_min.z);
-	float rawU = theta / (2.0f * PI);
-	float u = my_ppm->getWidth()-(1 - (rawU + 0.5));
-	float v = fmod(.5 + ist_min[1], 1);
-	float s = fmod((u*(float)my_ppm->getWidth()*texture->repeatU), (float)my_ppm->getWidth());
-	float t = fmod((v*(float)my_ppm->getHeight()*texture->repeatV), (float)my_ppm->getHeight());
-	SceneColor tex_c = my_ppm->getPixel(s, my_ppm->getHeight()-t);
+	// float theta = .5 + atan2(ist_min.x, ist_min.z);
+	// float rawU = theta / (2.0f * PI);
+	// float u = my_ppm->getWidth()-(1 - (rawU + 0.5));
+	// float v = fmod(.5 + ist_min[1], 1);
+	// float s = fmod((u*(float)my_ppm->getWidth()*texture->repeatU), (float)my_ppm->getWidth());
+	// float t = fmod((v*(float)my_ppm->getHeight()*texture->repeatV), (float)my_ppm->getHeight());
+	// SceneColor tex_c = my_ppm->getPixel(s, my_ppm->getHeight()-t);
+	texture(sampler2D textureName, vec2 texCoord) 
 }
