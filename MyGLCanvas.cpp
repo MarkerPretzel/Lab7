@@ -77,7 +77,7 @@ void MyGLCanvas::drawScene() {
 	glUniform3fv(glGetUniformLocation(myShaderManager->program, "lightPos"), 1, glm::value_ptr(lightPos));
 
 	//TODO: passing the integer useNormalMap to the shader
-
+	glUniform1f(glGetUniformLocation(myShaderManager->program, "useNormalMap"), useNormalMap);
 
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	glEnable(GL_TEXTURE_2D);
